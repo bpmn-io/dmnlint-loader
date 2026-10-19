@@ -24,7 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^6.3.0",
-    "dmnlint": "^0.2.0",
+    "dmnlint": "^2.0.0",
     "eslint": "^9.39.5",
     "eslint-plugin-bpmn-io": "^2.4.0",
     "memfs": "^4.80.0",
@@ -33,6 +33,6 @@
     "webpack": "^5.111.1"
   },
   "peerDependencies": {
-    "dmnlint": "^0.2.0"
+    "dmnlint": "^2.0.0"
   }
 }
