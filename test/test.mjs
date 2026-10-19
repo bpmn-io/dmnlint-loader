@@ -1,4 +1,4 @@
-import compiler from './compiler';
+import compiler from './compiler.mjs';
 
 import { expect } from 'chai';
 
@@ -41,7 +41,7 @@ async function compile(fixture) {
 
   const stats = await compiler(fixture);
 
-  const module = stats.toJson().modules.find(m => m.id === fixture);
+  const module = stats.toJson({ source: true }).modules.find(m => m.name === fixture);
 
   expect(module).to.exist;
 

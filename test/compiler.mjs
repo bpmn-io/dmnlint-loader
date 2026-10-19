@@ -1,29 +1,29 @@
 import path from 'path';
 
 import webpack from 'webpack';
-import memoryfs from 'memory-fs';
+import { createFsFromVolume, Volume } from 'memfs';
 
 
 export default function compiler(fixture, options = {}) {
   const compiler = webpack({
     mode: 'development',
-    context: __dirname,
+    context: import.meta.dirname,
     entry: fixture,
     output: {
-      path: path.resolve(__dirname),
+      path: path.resolve(import.meta.dirname),
       filename: 'bundle.js',
     },
     module: {
       rules: [{
         test: /\.(dmnlintrc|json)$/,
         use: {
-          loader: path.resolve(__dirname, '../index.js')
+          loader: path.resolve(import.meta.dirname, '../index.js')
         }
       }]
     }
   });
 
-  compiler.outputFileSystem = new memoryfs();
+  compiler.outputFileSystem = createFsFromVolume(new Volume());
 
   return new Promise((resolve, reject) => {
     compiler.run((err, stats) => {
