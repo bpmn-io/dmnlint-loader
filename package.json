@@ -1,6 +1,6 @@
 {
   "name": "dmnlint-loader",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Consume dmnlint config files with webpack",
   "main": "index.js",
   "files": [
