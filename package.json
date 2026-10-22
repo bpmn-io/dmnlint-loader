@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Consume dmnlint config files with webpack",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "all": "run-s lint test",
     "lint": "eslint .",
