@@ -6,6 +6,8 @@ All notable changes to [dmnlint-loader](https://github.com/bpmn-io/dmnlint-loade
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.2.0
+
 * `CHORE!`: require `dmnlint@^2.0.0` as peer dependency
 * `CHORE!`: require node@24
 * `DEPS`: update to `dmnlint@2.0.0`
